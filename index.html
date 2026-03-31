@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greg Goodwin - Resume</title>
+    <style>
+      :root {
+        --accent: #1a56db;
+        --accent-light: #e8f0fe;
+        --dark: #111827;
+        --mid: #374151;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --bg: #ffffff;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          'Segoe UI',
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--dark);
+        background: #f3f4f6;
+      }
+      a {
+        color: var(--accent-light);
+        text-decoration: none;
+      }
+      .page {
+        max-width: 860px;
+        margin: 32px auto;
+        background: var(--bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 100%);
+        color: #fff;
+        padding: 36px 44px 32px;
+      }
+      .header h1 {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 4px;
+      }
+      .header .title {
+        font-size: 15px;
+        font-weight: 500;
+        color: #bfdbfe;
+        margin-bottom: 14px;
+      }
+      .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 12.5px;
+        color: #dbeafe;
+      }
+      .contact-row-second {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 12.5px;
+        color: #dbeafe;
+        margin-top: 14px;
+      }
+      .body {
+        display: grid;
+        grid-template-columns: 1fr 260px;
+      }
+      .main {
+        padding: 32px 36px 40px;
+        border-right: 1px solid var(--border);
+      }
+      .sidebar {
+        padding: 32px 28px 40px;
+        background: #f9fafb;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      .section:last-child {
+        margin-bottom: 0;
+      }
+      .section-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent-light);
+        padding-bottom: 5px;
+        margin-bottom: 16px;
+      }
+      .job {
+        margin-bottom: 22px;
+      }
+      .job:last-child {
+        margin-bottom: 0;
+      }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2px;
+      }
+      .job-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--dark);
+      }
+      .job-dates {
+        font-size: 11.5px;
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-left: 8px;
+        padding-top: 2px;
+      }
+      .job-company {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 1px;
+      }
+      .job-meta {
+        font-size: 11.5px;
+        color: var(--muted);
+        margin-bottom: 7px;
+      }
+      .job-bullets {
+        list-style: none;
+        padding: 0;
+      }
+      .job-bullets li {
+        position: relative;
+        padding-left: 14px;
+        margin-bottom: 4px;
+        font-size: 12.5px;
+        color: var(--mid);
+      }
+      .job-bullets li::before {
+        content: '\25B8';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 10px;
+        top: 2px;
+      }
+      .job-note {
+        font-size: 12.5px;
+        color: var(--mid);
+      }
+      .skill-group {
+        margin-bottom: 14px;
+      }
+      .skill-group-label {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: var(--mid);
+        margin-bottom: 6px;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .skill-tag {
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 11.5px;
+        font-weight: 600;
+        padding: 3px 9px;
+        border-radius: 12px;
+      }
+      .sidebar-section {
+        margin-bottom: 26px;
+      }
+      .sidebar-section:last-child {
+        margin-bottom: 0;
+      }
+      .summary-text {
+        font-size: 12.5px;
+        color: var(--mid);
+        line-height: 1.65;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 18px 0;
+      }
+      @page {
+        size: Letter;
+        margin: 0.5in;
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-djngHGtzwPk0M6T6g99r_.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <h1>Greg Goodwin</h1>
+        <div class="title">Tech Lead and Senior Software Engineer</div>
+        <div class="contact-row">
+          <span
+            ><?xml version="1.0" encoding="iso-8859-1"?>
+            <svg
+              height="16"
+              width="16"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 58 58"
+              style="enable-background: new 0 0 58 58"
+              xml:space="preserve">
+              <line
+                style="
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-width: 2;
+                  stroke-linecap: round;
+                  stroke-miterlimit: 10;
+                "
+                x1="29"
+                y1="28"
+                x2="29"
+                y2="57" />
+              <circle style="fill: #dd352e" cx="29" cy="14" r="14" />
+              <circle style="fill: #f76363" cx="24" cy="10" r="3" />
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            &nbsp;Dallas-Fort Worth, TX</span
+          >
+          <span
+            ><a href="mailto:greggoodwin@gmail.com">
+              <svg
+                height="16"
+                width="16"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve">
+                <rect
+                  x="64"
+                  y="64"
+                  style="fill: #eceff1"
+                  width="384"
+                  height="384" />
+                <polygon
+                  style="fill: #cfd8dc"
+                  points="256,296.384 448,448 448,148.672 " />
+                <path
+                  style="fill: #f44336"
+                  d="M464,64h-16L256,215.616L64,64H48C21.504,64,0,85.504,0,112v288c0,26.496,21.504,48,48,48h16V148.672
+	l192,147.68L448,148.64V448h16c26.496,0,48-21.504,48-48V112C512,85.504,490.496,64,464,64z" />
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+              &nbsp;greggoodwin@gmail.com</a
+            ></span
+          >
+        </div>
+        <div class="contact-row-second">
+          <span>
+            <a
+              href="https://linkedin.com/in/greg-goodwin"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg
+                height="16"
+                width="16"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 382 382"
+                xml:space="preserve">
+                <path
+                  style="fill: #ffffff"
+                  d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z" />
+              </svg>
+              &nbsp;linkedin.com/in/greg-goodwin</a
+            ></span
+          >
+          <span
+            ><a
+              href="https://github.com/ggoodwin"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 98 96"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_730_27136)">
+                  <path
+                    d="M41.4395 69.3848C28.8066 67.8535 19.9062 58.7617 19.9062 46.9902C19.9062 42.2051 21.6289 37.0371 24.5 33.5918C23.2559 30.4336 23.4473 23.7344 24.8828 20.959C28.7109 20.4805 33.8789 22.4902 36.9414 25.2656C40.5781 24.1172 44.4062 23.543 49.0957 23.543C53.7852 23.543 57.6133 24.1172 61.0586 25.1699C64.0254 22.4902 69.2891 20.4805 73.1172 20.959C74.457 23.543 74.6484 30.2422 73.4043 33.4961C76.4668 37.1328 78.0937 42.0137 78.0937 46.9902C78.0937 58.7617 69.1934 67.6621 56.3691 69.2891C59.623 71.3945 61.8242 75.9883 61.8242 81.252L61.8242 91.2051C61.8242 94.0762 64.2168 95.7031 67.0879 94.5547C84.4102 87.9512 98 70.6289 98 49.1914C98 22.1074 75.9883 6.69539e-07 48.9043 4.309e-07C21.8203 1.92261e-07 -1.9479e-07 22.1074 -4.3343e-07 49.1914C-6.20631e-07 70.4375 13.4941 88.0469 31.6777 94.6504C34.2617 95.6074 36.75 93.8848 36.75 91.3008L36.75 83.6445C35.4102 84.2188 33.6875 84.6016 32.1562 84.6016C25.8398 84.6016 22.1074 81.1563 19.4277 74.7441C18.375 72.1602 17.2266 70.6289 15.0254 70.3418C13.877 70.2461 13.4941 69.7676 13.4941 69.1934C13.4941 68.0449 15.4082 67.1836 17.3223 67.1836C20.0977 67.1836 22.4902 68.9063 24.9785 72.4473C26.8926 75.2227 28.9023 76.4668 31.2949 76.4668C33.6875 76.4668 35.2187 75.6055 37.4199 73.4043C39.0469 71.7773 40.291 70.3418 41.4395 69.3848Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_730_27136">
+                    <rect width="98" height="96" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              &nbsp;github.com/ggoodwin</a
+            ></span
+          >
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="main">
+          <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">
+              Tech Lead and Senior Software Engineer with 15+ years of
+              full-stack experience building modern, cloud-native applications.
+              Expert in C#/.NET, TypeScript, React, React Native, Azure, and
+              AWS. Currently leading customer-facing platform and identity
+              initiatives at Jewelers Mutual Group, architecting scalable
+              distributed systems, modernizing legacy platforms, and mentoring
+              engineers across cross-functional teams.
+            </p>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Experience</div>
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title"
+                  >Senior Software Engineer and Technical Lead</span
+                >
+                <span class="job-dates">Oct 2023 - Present</span>
+              </div>
+              <div class="job-company">Jewelers Mutual Group</div>
+              <div class="job-meta">Full-time · Dallas, TX · Hybrid</div>
+              <ul class="job-bullets">
+                <li>
+                  Led cross-functional team building customer-facing web and
+                  mobile apps (React, React Native, Angular, TypeScript)
+                  deployed on Azure and AWS, supporting large customer
+                  populations.
+                </li>
+                <li>
+                  Architected microservices and serverless solutions using C#
+                  and modern .NET, improving scalability and operational
+                  efficiency.
+                </li>
+                <li>
+                  Architected microservices and serverless solutions using C#
+                  and modern .NET, improving scalability and operational
+                  efficiency.
+                </li>
+                <li>
+                  Served as technical owner for the enterprise identity
+                  initiative, designing and implementing modern authentication
+                  for consumer login and machine-to-machine/API access.
+                </li>
+                <li>
+                  Modernized legacy monoliths into serverless and microservice
+                  architectures, improving reliability and deployment velocity.
+                </li>
+                <li>
+                  Standardized engineering patterns, frameworks, and cloud
+                  delivery practices across teams to improve maintainability and
+                  cross-team collaboration.
+                </li>
+                <li>
+                  Mentored engineers with technical direction and code review,
+                  achieving a 50%+ reduction in customer-reported issues within
+                  six months.
+                </li>
+              </ul>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title">Software Engineer II</span>
+                <span class="job-dates">Sep 2022 - Sep 2023</span>
+              </div>
+              <div class="job-company">Bank of America</div>
+              <div class="job-meta">Remote · Dallas, TX</div>
+              <ul class="job-bullets">
+                <li>
+                  Delivered new features and defect resolutions for financial
+                  advisor tools using .NET and JavaScript, improving usability
+                  and onboarding workflows.
+                </li>
+                <li>
+                  Improved web application performance 30% using C#, ASP.NET,
+                  and Handlebars templating.
+                </li>
+                <li>
+                  Delivered Agile initiatives on schedule using Jira, Bitbucket,
+                  and Jenkins CI/CD workflows.
+                </li>
+              </ul>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title">Senior Application Developer</span>
+                <span class="job-dates">Sep 2020 - Sep 2022</span>
+              </div>
+              <div class="job-company">Nations Photo Lab</div>
+              <div class="job-meta">Full-time · Remote</div>
+              <ul class="job-bullets">
+                <li>
+                  Delivered multiple WPF MVVM features that improved user
+                  experience by 20%.
+                </li>
+                <li>
+                  Supported product and fulfillment systems managing 500+ SKUs
+                  across 20+ partner relationships.
+                </li>
+                <li>
+                  Integrated Salesforce and imported 10,000+ orders, boosting
+                  revenue through improved reporting pipelines.
+                </li>
+                <li>
+                  Improved public-facing back end with C#, .NET, and SQL Server,
+                  cutting page load times by 30%.
+                </li>
+              </ul>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title">Software Developer</span>
+                <span class="job-dates">May 2019 - Sep 2020</span>
+              </div>
+              <div class="job-company">Pounds Photo Lab</div>
+              <div class="job-meta">Full-time · Dallas · On-site</div>
+              <ul class="job-bullets">
+                <li>
+                  Reduced software errors by 30% and increased efficiency 20%
+                  through targeted optimization of photo services applications.
+                </li>
+                <li>
+                  Modernized legacy Windows and web systems, delivering a 30%
+                  operational throughput gain.
+                </li>
+              </ul>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title">Software Developer</span>
+                <span class="job-dates">Aug 2015 - May 2019</span>
+              </div>
+              <div class="job-company">Photo Texas Photography</div>
+              <div class="job-meta">Full-time · Austin, TX · On-site</div>
+              <ul class="job-bullets">
+                <li>
+                  Led software development for Texas's leading school
+                  photography company, reducing delivery time and boosting
+                  customer satisfaction.
+                </li>
+                <li>
+                  Built automated shipping tools boosting productivity 30% and
+                  cutting costs 20%; promoted to leadership in under two years.
+                </li>
+              </ul>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title">Earlier Roles</span>
+                <span class="job-dates">1999 - 2015</span>
+              </div>
+              <p class="job-note" style="margin-bottom: 5px">
+                <strong>Software Developer — Loon Studios</strong> (2009-2015):
+                Delivered tailored software and web solutions to small
+                businesses using C#, ASP.NET MVC, and SQL Server. Mentored 50+
+                veterans transitioning into software development.
+              </p>
+              <p class="job-note" style="margin-bottom: 5px">
+                <strong>Software Developer — WEX Health</strong> (2008-2009):
+                Resolved 95% of active issues in health insurance web
+                applications using C#, ASP.NET, and SQL Server.
+              </p>
+              <p class="job-note" style="margin-bottom: 5px">
+                <strong>Software Developer — Merrill Corporation</strong>
+                (2006-2008): Migrated legacy systems to ASP.NET/VB.NET, boosting
+                reliability 50%.
+              </p>
+              <p class="job-note" style="margin-bottom: 5px">
+                <strong>Software Developer — WAND Corporation</strong>
+                (2005-2006): Built software for fast-food kiosk systems.
+              </p>
+              <p class="job-note" style="margin-bottom: 5px">
+                <strong>Software Developer — ERUCES</strong> (2000-2001):
+                Web-based medical billing software; pioneered database
+                encryption.
+              </p>
+              <p class="job-note">
+                <strong>Web Developer — United Television (UPN)</strong>
+                (1999-2000): Developed early CMS for news/weather delivery using
+                Classic ASP.
+              </p>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="job">
+              <div class="job-header">
+                <span class="job-title"
+                  >Specialist E4 — Aviation Battalion</span
+                >
+                <span class="job-dates">Sep 2001 - Nov 2004</span>
+              </div>
+              <div class="job-company">
+                United States Army — 3rd Infantry Division
+              </div>
+              <p class="job-note">
+                Deployed during Operation Iraqi Freedom. Earned five military
+                medals for performance, leadership, and mission execution.
+                Honorably discharged.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="sidebar-section">
+            <div class="section-title">Technical Skills</div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Languages</div>
+              <div class="skill-tags">
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Frontend</div>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS / Tailwind</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Backend / APIs</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">ASP.NET Core</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">gRPC</span>
+                <span class="skill-tag">API Design</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Cloud and DevOps</div>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">Infrastructure as Code (IaC)</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Spacelift</span>
+                <span class="skill-tag">Azure Pipelines</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">GitOps</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Data</div>
+              <div class="skill-tags">
+                <span class="skill-tag">SQL Server</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">T-SQL / PL/SQL</span>
+                <span class="skill-tag">Data Modeling</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Architecture</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Modular Monolith</span>
+                <span class="skill-tag">Microservices</span>
+                <span class="skill-tag">Event-Driven Architecture</span>
+                <span class="skill-tag">Message-Driven Systems</span>
+                <span class="skill-tag">Serverless</span>
+                <span class="skill-tag">Backend-for-Frontend (BFF)</span>
+                <span class="skill-tag">Clean / Hexagonal Architecture</span>
+                <span class="skill-tag">API-First Design</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Design Patterns</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Dependency Injection</span>
+                <span class="skill-tag">Strategy Pattern</span>
+                <span class="skill-tag">Adapter Pattern</span>
+                <span class="skill-tag">Facade Pattern</span>
+                <span class="skill-tag">Repository Pattern</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Engineering Practices</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Domain-Driven Design (DDD)</span>
+                <span class="skill-tag">Test-Driven Development (TDD)</span>
+                <span class="skill-tag">SOLID Principles</span>
+                <span class="skill-tag">Refactoring</span>
+                <span class="skill-tag">Technical Documentation</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">
+                Identity and Access Management
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">OAuth 2.0 / OIDC</span>
+                <span class="skill-tag">SSO / Federation</span>
+                <span class="skill-tag">JWT / Token-Based Auth</span>
+                <span class="skill-tag">CIAM / IAM</span>
+                <span class="skill-tag">RBAC / ABAC</span>
+                <span class="skill-tag">Federation Patterns</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="section-title">Delivery Practices</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Agile / Scrum</span>
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Azure DevOps</span>
+              <span class="skill-tag">Code Review</span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="section-title">Domains</div>
+            <div class="skill-tags">
+              <span class="skill-tag">InsurTech</span>
+              <span class="skill-tag">FinTech</span>
+              <span class="skill-tag">E-Commerce</span>
+              <span class="skill-tag">Healthcare IT</span>
+              <span class="skill-tag">Legal Tech</span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="section-title">Military Service</div>
+            <p style="font-size: 12.5px; color: #374151; line-height: 1.7">
+              U.S. Army Veteran<br />
+              3rd Infantry Division<br />
+              Honorably Discharged
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
