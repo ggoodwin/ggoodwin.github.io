@@ -224,6 +224,21 @@
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
     </script>
+    <!-- Privacy-friendly analytics by OpenPanel -->
+    <script>
+      window.op=window.op||function(){var n=[];return new Proxy(function(){arguments.length&&n.push([].slice.call(arguments))},{get:function(t,r){return"q"===r?n:function(){n.push([r].concat([].slice.call(arguments)))}} ,has:function(t,r){return"q"===r}}) }();
+      window.op('init', {
+      apiUrl: 'https://op.bin.ms/api',
+        clientId: '91975aec-f001-4e1e-9916-deb1ef23f17b',
+        trackScreenViews: true,
+        trackOutgoingLinks: true,
+        trackAttributes: true,
+        // sessionReplay: {
+        //   enabled: true,
+        // },
+      });
+    </script>
+    <script src="https://openpanel.dev/op1.js" defer async></script>
   </head>
   <body>
     <div class="page">
